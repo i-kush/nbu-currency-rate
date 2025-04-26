@@ -1,0 +1,6 @@
+{
+  "/CurrencyRate/api/*": {
+    "target": "http://localhost:10001",
+    "secure": false
+  }
+}

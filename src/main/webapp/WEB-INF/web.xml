@@ -1,0 +1,26 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <env-entry>
+        <description>NBU currency rate web service url</description>
+        <env-entry-name>application/nbuWebServiceUrl</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>DEFAULT_URL</env-entry-value>
+    </env-entry>
+
+    <env-entry>
+        <description>Storage folder path for cache in Windows environment</description>
+        <env-entry-name>application/cacheFolderPathWindows</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>DEFAULT_WINDOWS_PATH</env-entry-value>
+    </env-entry>
+
+    <env-entry>
+        <description>Storage folder path for cache in Unix-like environment</description>
+        <env-entry-name>application/cacheFolderPathNix</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>DEFAULT_WINDOWS_PATH</env-entry-value>
+    </env-entry>
+</web-app>

@@ -1,0 +1,1 @@
+mvn clean -P buildAngular package

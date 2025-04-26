@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/CurrencyRate">
+  <Manager pathname=""/>
+
+  <Environment name="application/nbuWebServiceUrl"
+               type="java.lang.String"
+               override="false"
+               value="https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange"/>
+
+  <Environment name="application/cacheFolderPathWindows"
+               type="java.lang.String"
+               override="false"
+               value="d:\temp\CurrencyRate\Cache\"/>
+
+   <Environment name="application/cacheFolderPathNix"
+               type="java.lang.String"
+               override="false"
+               value="tmp\temp\CurrencyRate\Cache\"/>
+</Context>

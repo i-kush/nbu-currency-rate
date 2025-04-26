@@ -1,0 +1,118 @@
+<div align="center">
+  <form [formGroup]="monthlyRateFormGroup"
+        (ngSubmit)="calculateMonthlyRate()">
+    <table>
+      <tr>
+        <td colspan="4" align="center">
+          Налаштування вибору
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select (change)="onCurrencyInfoSelect($event.target.value)"
+                  [formControlName]="'currencyCode'">
+            <option *ngFor="let currencyInfo of currenciesInfo"
+                    [selected]="currencyInfo.code == selectedCurrencyInfo.code">
+              {{ currencyInfo.code }}
+            </option>
+          </select>
+        </td>
+        <td>
+          {{ selectedCurrencyInfoText }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select [formControlName]="'currencyYear'">
+            <option *ngFor="let year of availableYears"
+                    [selected]="year == currentYear">
+              {{ year }}
+            </option>
+          </select>
+        </td>
+        <td>
+          Рік
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select [formControlName]="'currencyMonth'">
+            <option *ngFor="let month of availableMonths"
+                    [selected]="month == currentMonth">
+              {{ month }}
+            </option>
+          </select>
+        </td>
+        <td>
+         Місяць
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"
+            align="center">
+          <button type="submit">Отримати</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <div style="height: 40px">
+  </div>
+
+  <table *ngIf="isMessageShown">
+    <tr>
+      <td>
+        {{ message }}
+      </td>
+    </tr>
+  </table>
+
+  <table *ngIf="currentAverageRateInfo && !isMessageShown">
+    <tr>
+      <td colspan="4" align="center">
+        Останній отриманий результат
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Місяць
+      </td>
+      <td>
+        {{ currentAverageRateInfo.month }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Рік
+      </td>
+      <td>
+        {{ currentAverageRateInfo.year }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Валюта
+      </td>
+      <td>
+        {{ currentAverageRateInfo.currencyCode }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Курс
+      </td>
+      <td>
+        {{ currentAverageRateInfo.averageNbuRate }}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"
+          align="center">
+        <button type="button"
+                (click)="onDownloadClick()">
+          Завантажити
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
