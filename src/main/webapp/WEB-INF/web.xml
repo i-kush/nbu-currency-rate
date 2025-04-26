@@ -21,6 +21,6 @@
         <description>Storage folder path for cache in Unix-like environment</description>
         <env-entry-name>application/cacheFolderPathNix</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
-        <env-entry-value>DEFAULT_WINDOWS_PATH</env-entry-value>
+        <env-entry-value>DEFAULT_UNIX_PATH</env-entry-value>
     </env-entry>
 </web-app>

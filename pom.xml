@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>groupId</groupId>
-    <artifactId>CurrencyRate</artifactId>
+    <artifactId>nbu-currency-rate</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
     <properties>

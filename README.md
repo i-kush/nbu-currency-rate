@@ -15,3 +15,4 @@ this approach was popular in the old days, when admins wanted to have more contr
 
 - java 8
 - Tomcat server where to run an application
+- `mvn clean -P buildAngular package`
